@@ -1,0 +1,137 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 1874px;
+    font: normal 300 14px FiraSans;
+
+
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    display: inline-block;
+    background: #8cc34b;
+    overflow: hidden;
+    position: relative;
+    margin-bottom:80px;
+    box-shadow: 0px 5px 20px 0px rgba(204,204,204,1) /* Параметры тени */
+}
+img{
+    max-width: 62px;
+    max-height: 62px;
+    -webkit-border-radius: 31px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    margin: 15px 27px;
+    background-color: rgb(255,255,255);
+    padding: 2px;
+    float: left;
+}
+div.person{
+    width:280px;
+    margin: 25px 0 25px;
+    color: rgba(114,114,114,1);
+    float: left;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: FiraSans;
+    color: #fff;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 21.26px;
+}
+li.regular{
+    font-family:FiraSans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+}
+.social{
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    margin-top: 25px;
+    margin-right:30px;
+}
+svg *{
+     fill: #e1eed4;
+ }
+
+a :hover {
+    fill: #ffffff;
+}
+main{
+    height: 1634px;
+
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+}
+h1{
+    font-family:FiraSans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    margin: 0 auto 10px;
+}
+h3{
+    margin: 0;
+}
+p{
+    font-family:FiraSans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    margin: 0;
+}
+.cols{
+    width: 100%;
+    height: 320px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.cols.col-2{
+    width:16.67%;
+}
+.cols.col-3{
+    width: 25%;
+}
+.cols > div{
+    margin-right: 15px;
+}
+img.hello{
+    width: 140px;
+    height: 137px;
+    margin: 0;
+    padding: 0;
+}
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: #212121;
+}

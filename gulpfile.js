@@ -24,7 +24,13 @@ gulp.task('css', function () {
 });
 // JS
 gulp.task('js', function () {
-    gulp.src('./app/js/*.css')
+    gulp.src('./app/js/*.js')
+        .pipe(connect.reload());
+});
+
+//JQ
+gulp.task('js', function () {
+    gulp.src('./app/js/vendor/*.js')
         .pipe(connect.reload());
 });
 
@@ -33,6 +39,7 @@ gulp.task('watch', function () {
     gulp.watch(['./app/*.html'], ['html']);
     gulp.watch(['./app/css/*.css'], ['css']);
     gulp.watch(['./app/js/*.js'], ['js']);
+    gulp.watch(['./app/js/vendor/*.js'], ['js']);
 });
 
 // Задача по-умолчанию

@@ -4,12 +4,24 @@
     -o-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     padding: 0;
     margin: 0;
-    width: 1200px;
-    height: 1874px;
+    height: 100%;
     font: normal 300 14px/21px FiraSans;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 header {
@@ -18,29 +30,30 @@ header {
     display: inline-block;
     background: #8cc34b;
     overflow: hidden;
-    position: relative;
-    margin-bottom:80px;
-    box-shadow: 0px 5px 20px 0px rgba(204,204,204,1); /* Параметры тени */
+    margin-bottom: 80px;
+    box-shadow: 0px 5px 20px 0px rgba(204, 204, 204, 1); /* Параметры тени */
 }
-header img{
+
+header img {
     max-width: 62px;
     max-height: 62px;
     -webkit-border-radius: 31px;
     -moz-border-radius: 35px;
     border-radius: 35px;
     margin: 15px 27px;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     padding: 2px;
     float: left;
 }
-div.person{
-    width:280px;
-    margin: 25px 0 25px;
-    color: rgba(114,114,114,1);
+
+div.person {
+    width: 360px;
+    margin: 25px 0;
+    color: rgba(114, 114, 114, 1);
     float: left;
 }
 
-ul{
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -48,11 +61,13 @@ ul{
     font-weight: 600;
     font-size: 21.26px;
 }
-li.regular{
+
+li.regular {
     font-weight: 300;
     font-size: 14px;
 }
-.social{
+
+.social {
     width: 150px;
     display: flex;
     flex-direction: row;
@@ -60,160 +75,228 @@ li.regular{
     align-items: center;
     float: right;
     margin-top: 25px;
-    margin-right:30px;
+    margin-right: 30px;
 }
-svg *{
-     fill: #e1eed4;
- }
 
-a :hover {
+a svg {
+    fill: #e1eed4;
+}
+
+a:hover svg {
     fill: #ffffff;
 }
-main{
-    width:100%;
-    height: 1634px;
+
+main {
+    width: 100%;
 
 }
 
-.title{
+.title {
     text-align: center;
     margin-bottom: 40px;
 }
-.title p{
+
+.title p {
     font-size: 21px;
 }
-h1{
+
+h1 {
     font-weight: 600;
     font-size: 42px;
     margin: 0 auto 20px;
 }
-h2{
+
+h2 {
     margin: 0;
     font-weight: 600;
+    font-size: 21px;
 }
-p{
+
+p {
     font-weight: 300;
     font-size: 14px;
     margin: 0;
 }
-.cols{
+
+.cols {
     width: 100%;
-    height: 320px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
 }
-.col-2{
-    width:11%;
+
+.col-2 {
+    width: 11%;
     margin-right: 20px;
-    overflow: hidden;
+
 }
-.empty{
+
+.empty {
     width: 20px;
 }
-.col-3{
+
+.col-3 {
     width: 25%;
-    height: 160px;
-    overflow: hidden;
 }
-.wrapper{
-    width:100%;
-    height:1214px;
+
+.wrap {
+    width: 100%;
     background: url("../img/gplaypattern.png");
     padding-top: 75px;
 }
-.curses{
-    height: 1038px;
-    margin: 0 130px;
+
+.curses {
+    max-width: 960px;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
 }
-.curse-item{
+
+.curse-item {
     width: 300px;
     height: 430px;
+    margin: 0 20px 20px 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    box-shadow: 0px 5px 20px 0px rgba(204,204,204,1)
+    box-shadow: 0px 5px 20px 0px rgba(204, 204, 204, 1);
 }
-/* Не знал как корректно указать отсутсвие мардж-райт у 3-го и 6-го элемента */
-.curse-item:nth-child(1),
-.curse-item:nth-child(2),
-.curse-item:nth-child(4),
-.curse-item:nth-child(5){
-    margin-right: 20px;
+
+.curse-item.BasEl,
+.curse-item.AdCSS {
+    height: 475px;
 }
-.curse-item.JS{
-    order:1;
+
+.to-color {
+    opacity: 0.5;
 }
-.curse-item.JQ{
-    order:2;
-}
-.curse-item.BasEl{
-    order:3;
-}
-.curse-item.AdptSit{
-    order:4;
-}
-.curse-item.AdCSS{
-    order:5;
-}
-.curse-item.AdCSSGal{
-    order: 6;
-}
-.item{
-    width:100%;
+
+.item {
+    width: 100%;
     height: 170px;
 }
-.item.JS{
+
+.item.JS {
     background: url("../img/LayerJS.png");
 }
-.item.JQ{
+
+.item.JQ {
     background: url("../img/LayerJQ.png");
 }
-.item.BasEl{
-     background: url("../img/LayerBaseEl.png");
- }
-.item.AdptSit{
+
+.item.BasEl {
+    background: url("../img/LayerBaseEl.png");
+}
+
+.item.AdptSit {
     background: url("../img/LayerAdptSit.png");
 }
-.item.AdCSS{
+
+.item.AdCSS {
     background: url("../img/AddCSS.png");
 }
-.item.AdCSSGal{
+
+.item.AdCSSGal {
     background: url("../img/LayerAdCSSGal.png");
 }
-div.hover-line{
+
+div.hover-line {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+.description {
+    width: 260px;
+    margin: 20px 20px 0;
+
+}
+
+div.time-def {
+    font-weight: 300px;
+    color: #b6b6b6;
+    margin: 20px
+
+}
+
+.description h2:hover {
+    color: #8cc34b;
+}
+
+.curse-item:hover .hover-line {
     background-color: #8cc34b;
-    visibility: visible;
 }
-.description{
-    width:100%;
-    height: 200px;
-}
-.checkbox{
-    width:100%;
+
+.checkbox {
+    width: 100%;
     height: 60px;
     background-color: #f6f7f2;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
-input{
+
+.checkbox div {
+    width: 20px;
+    height: 20px;
+    margin: 20px 0 20px 20px;
+    background: url("../img/chBox.png");
+    cursor: pointer;
+}
+
+.checkbox label:hover {
+    color: #8cc34b;
+}
+
+input {
     width: 20px;
     height: 20px;
     margin: 20px;
-    background-color: inherit;
-}
-.hover-line{
-    width:100%;
-    height:5px;
+
 }
 
-footer{
+label {
+    width: 150px;
+    height: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 20px;
+    background: #f6f7f2;
+    cursor: pointer;
+}
+
+.complete {
+    width: 550px;
+    height: 500px;
+    font-weight: 600;
+    font-size: 42px;
+    color: #8cc34b;
+    padding-top: 200px;
+
+    margin: 0 auto;
+    display: none;
+}
+
+.befor-footer {
+    height: 70px;
+}
+
+footer {
     width: 100%;
     height: 70px;
+    margin-top: -70px;
     background-color: #212121;
+    position: relative;
+
+}
+
+footer div {
+    text-align: center;
+    height: 40px;
+    color: #f6f6f3;
+
 }
